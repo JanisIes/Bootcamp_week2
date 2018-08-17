@@ -29,7 +29,7 @@ const logIn = async (req, res) => {
           data: { username: user.username },
         },
         process.env.JWT_SECRET,
-        { expiresIn: '1h' },
+        { expiresIn: '6h' },
       );
       logger.log('info', `Successfully logged in: ${user.username}`);
       res.status(200).send({ payload: { token } });

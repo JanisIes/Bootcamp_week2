@@ -1,7 +1,8 @@
 import * as CommentModel from '../models/CommentModel';
 import AppError from '../errors/AppError';
+import Logger from '../utils/logger';
 
-const logger = require('../utils/logger')('logController');
+const logger = Logger('commentController');
 
 const getPostComments = async (req, res) => {
   logger.log('debug', 'getPostComments: %j', req.body);
